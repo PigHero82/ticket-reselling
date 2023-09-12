@@ -1,6 +1,11 @@
 import './globals.css'
+
+// Next
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+
+// Components
+import { Footer, Header } from './components'
 
 // Third-Party Libraries
 import { Toaster } from 'react-hot-toast'
@@ -20,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Header />
         {children}
+        <Footer />
 
         <Toaster />
       </body>
