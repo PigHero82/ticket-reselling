@@ -1,1 +1,1 @@
-export * from "./DataEmpty"
+export * from "./views"
