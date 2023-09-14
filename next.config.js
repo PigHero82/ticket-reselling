@@ -8,6 +8,12 @@ const nextConfig = {
         port: '8888',
         pathname: '/ticket-reselling-api/public/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'ticket-api.mitrait.id',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 }
