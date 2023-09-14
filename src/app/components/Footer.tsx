@@ -6,7 +6,7 @@ import { Config } from "@/configs"
 
 export function Footer() {
   return (
-    <div className="bg-center bg-cover" style={{ backgroundImage: `url(/footer.jpg)` }}>
+    <div className="mt-auto bg-center bg-cover" style={{ backgroundImage: `url(/assets/images/footer.jpg)` }}>
       <div className='container'>
         <div className='py-10 grid grid-cols-1 md:grid-cols-3'>
           <div className="mb-5 flex justify-center md:justify-start">

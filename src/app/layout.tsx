@@ -14,7 +14,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Finns Ticket Marketplace',
-  description: 'Ticket Reselling for Finns Beach Club'
+  description: 'Ticket Reselling for Finns Beach Club',
+  icons: {
+    icon: "/assets/images/favicon.png",
+    apple: "/assets/images/favicon.png"
+  }
 }
 
 export default function RootLayout({
@@ -24,9 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.png?<generated>" type="image/<generated>" sizes="<generated>" />
-
-      <body className={`${inter.className}`}>
+      <body className={`h-screen flex flex-col ${inter.className}`}>
         <Header />
         {children}
         <Footer />
