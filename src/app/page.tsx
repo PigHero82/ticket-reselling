@@ -16,7 +16,7 @@ import { StepAssets } from "@/configs"
 export default function Home() {
   return (
     <Fragment>
-      <section className="bg-no-repeat bg-cover bg-center" style={{ backgroundImage: "url(/hero-banner.jpg)" }}>
+      <section className="bg-no-repeat bg-cover bg-center" style={{ backgroundImage: "url(/assets/images/hero-banner.jpg)" }}>
         <div className="min-h-[550px] container flex flex-col lg:flex-row justify-center items-center">
           <Image src={Ticket} alt="Ticket Icon" className="m-5" priority />
 

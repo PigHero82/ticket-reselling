@@ -8,7 +8,7 @@ import { services } from "@/services"
 import { toast } from "react-hot-toast"
 
 // Types
-import { ErrorFetch, SuccessFetch } from "@/types"
+import type { ErrorFetch, SuccessFetch } from "@/types"
 
 type Event = {
   background: string

@@ -4,8 +4,11 @@
 import Image from "next/image"
 import Link from "next/link"
 
-// View Models
-import { useEvents } from "./viewModels"
+// Components
+import { DataEmpty } from "@/components"
+
+// Utils
+import { useEvents } from "./utils"
 
 export function Event() {
   // Hooks
@@ -24,7 +27,9 @@ export function Event() {
             </section>
           </div>
         </div>
-      )) : data.map((item, key) =>(
+      )) : data.length === 0 ? (
+        <DataEmpty />
+      ) : data.map((item, key) => (
         <div key={key} className="card card-compact w-80 shadow-xl">
           <Image src={item.background} alt={item.name} width={318} height={318} className="rounded-t-lg" />
 
