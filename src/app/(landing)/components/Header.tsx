@@ -18,7 +18,11 @@ export function Header() {
 
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
                   <li><a>Featured Events</a></li>
-                  <li><a>Buy Tickets</a></li>
+                  <li>
+                    <Link href="/event">
+                      Buy Tickets
+                    </Link>
+                  </li>
                   <li><a>Sell Tickets</a></li>
                   <li><a>Register</a></li>
                   <li><a>Login</a></li>
@@ -32,7 +36,11 @@ export function Header() {
             <div className="navbar-end hidden xl:flex">
               <ul className="navbar-menu menu menu-horizontal px-1 items-center">
                 <li><a>Featured Events</a></li>
-                <li><a>Buy Tickets</a></li>
+                <li>
+                  <Link href="/event">
+                    Buy Tickets
+                  </Link>
+                </li>
                 <li><a>Sell Tickets</a></li>
                 <li><a className="py-0"><button className="btn btn-primary btn-outline">Register</button></a></li>
                 <li><a className="py-0"><button className="btn btn-primary">Login</button></a></li>

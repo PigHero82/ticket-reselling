@@ -28,7 +28,7 @@ export function Event() {
           </div>
         </div>
       )) : data.length === 0 ? (
-        <DataEmpty />
+        <DataEmpty title="No Events Available" />
       ) : data.map((item, key) => (
         <div key={key} className="card card-compact w-80 shadow-xl">
           <Image src={item.background} alt={item.name} width={318} height={318} className="rounded-t-lg" />

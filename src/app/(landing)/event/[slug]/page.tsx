@@ -11,6 +11,7 @@ import { CardSection } from "./components"
 // Third-Party Libraries
 import moment from "moment"
 import { StepAssets } from "@/configs"
+import { DataEmpty } from "@/components"
 
 type Data = {
   name: string
@@ -99,6 +100,37 @@ export default async function EventDetail(route: {
           </section>
 
           <input type="checkbox" className="toggle toggle-lg toggle-primary" />
+        </CardSection.Body>
+      </CardSection>
+
+      <CardSection>
+        <CardSection.Body>
+          {service.length === 0 ? (
+            <section className="flex justify-center">
+              <DataEmpty title="No services available" />
+            </section>
+          ) : service.map((item, key) => {
+            // Variables
+            const ticket_total = item.ticket.length
+
+            return (
+              <div key={key} tabIndex={0} className="collapse collapse-arrow rounded-none border-b-2 border-primary">
+                <input type="checkbox" />
+                <div className="collapse-title">
+                  <ul className="list-disc">
+                    <li className="ml-3 text-xl font-medium">
+                      <div>{item.name}</div>
+                      {ticket_total > 0 && <div className="font-bold">{ticket_total} tickets</div>}
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="collapse-content">
+                  <div className="text-center">No tickets available</div>
+                </div>
+              </div>
+            )
+          })}
         </CardSection.Body>
       </CardSection>
     </div>

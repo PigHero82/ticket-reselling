@@ -4,11 +4,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-// Components
-import { Footer, Header } from './components'
-
 // Third-Party Libraries
-import { Toaster } from 'react-hot-toast'
+import { Suspense } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,12 +26,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`h-screen flex flex-col ${inter.className}`}>
-        <Header />
-        {children}
-        <Footer />
-
-        <Toaster />
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
       </body>
     </html>
+  )
+}
+
+function Loading() {
+  return (
+    <div className='flex flex-col h-full'>
+      <span className="loading loading-dots loading-lg text-primary"></span>
+    </div>
   )
 }
