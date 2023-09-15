@@ -15,11 +15,13 @@ export default function EventLayout(props: PropsWithChildren<{}>) {
 function Loading() {
   return (
     <div className="container my-3 flex flex-col gap-3">
-      <div className="animate-pulse bg-slate-200">
-        <CardSection>
-          <CardSection.Body className="h-96" />
-        </CardSection>
-      </div>
+      {[...Array(3)].map((_, key) => (
+        <div key={key} className="animate-pulse bg-slate-200">
+          <CardSection>
+            <CardSection.Body className="h-96" />
+          </CardSection>
+        </div>
+      ))}
     </div>
   )
 }
