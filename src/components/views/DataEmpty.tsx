@@ -1,14 +1,16 @@
+// Next
+import Image from "next/image"
+
 // Assets
-import Empty from "@/assets/lotties/empty.json"
+import Empty from "@/assets/images/empty-box.png"
 
-// Third-Party Libraries
-import Lottie from "lottie-react"
-
-export function DataEmpty() {
+export function DataEmpty(props: {
+  title?: string
+}) {
   return (
     <section className="prose flex flex-col items-center">
-      <Lottie animationData={Empty} className="w-48" loop />
-      <h2 className="m-0">No Data Available</h2>
+      <Image src={Empty} alt="Data Empty" className="w-48" />
+      <h2 className="m-0">{props.title ?? "No Data Available"}</h2>
     </section>
   )
 }
